@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Streaming App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Video Streaming App</h1>
+
+        <div class="video-player">
+            <video id="video" class="video" width="100%" controls>
+                <source src="https://samplelib.com/lib/preview/mp4/sample-15s.mp4" type="video/mp4">
+                <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+
+            <div class="controls">
+                <button id="playPauseBtn" class="control-btn">Play</button>
+                <input type="range" id="progressBar" class="progress-bar" value="0" max="100" step="1">
+                <input type="range" id="volumeControl" class="volume-control" value="100" max="100" step="1">
+                <button id="fullscreenBtn" class="control-btn">Fullscreen</button>
+            </div>
+        </div>
+
+        <h2>More Videos</h2>
+        <div class="video-list">
+            <video class="thumbnail" src="https://samplelib.com/lib/preview/mp4/sample-10s.mp4" onclick="changeVideo(this)"></video>
+            <video class="thumbnail" src="https://samplelib.com/lib/preview/mp4/sample-15s.mp4" onclick="changeVideo(this)"></video>
+            <video class="thumbnail" src="https://samplelib.com/lib/preview/mp4/sample-20s.mp4" onclick="changeVideo(this)"></video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
